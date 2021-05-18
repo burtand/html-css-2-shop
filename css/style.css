@@ -67,7 +67,7 @@ a {
 .promo__text h1 span {
   font-size: 18px;
 }
-.promo__decor {
+.promo__text-decor {
   color: #F16D7F;
 }
 
@@ -131,6 +131,9 @@ a {
   /* margin-top: 90px; */
 }
 
+.goods_margin {
+  margin-bottom: 128px;
+}
 
 .goods__heading {
   color: black;
@@ -155,7 +158,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 
 }
 
@@ -264,24 +267,21 @@ a {
   height: 100%;
 }
 
-.subscribe__message {
+.subscribe__left {
   display: flex;
   width: 50%;
   align-items: center;
 }
 
-.subscribe__message_card {
+.subscribe__message {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: -30px;
 } 
 
-.subscribe__message_card h4 {
-  display: block;
-  text-align: center;
-}
-.subscribe__message_card p {
+
+.subscribe__message p {
   display: block;
   text-align: center;
   margin-top: 30px;
@@ -291,7 +291,7 @@ a {
   margin-left: 10px;
 }
 
-.subscribe__form {
+.subscribe__right {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -325,44 +325,44 @@ a {
   font-weight: 400;
 }
 
-.subscribe__form_form {
+.subscribe__form {
   display: flex;
   margin: 24px 0 0 0;
 }
 
-.subscribe__form_form_email, .subscribe__form_form_btn {
+.subscribe__email, .subscribe__btn {
   padding: 16px;
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
 }
 
-.subscribe__form_form_email {
+.subscribe__email {
   width: 256px;
   border-radius: 22px 0 0 22px;
   background-color: #E1E1E1;
 }
 
-.subscribe__form_form_email:focus {
+.subscribe__email:focus {
   outline: none;
   background-color: grey;
   color: white;
   transition: all 1s;
 }
 
-.subscribe__form_form_email:focus::placeholder {
+.subscribe__email:focus::placeholder {
   color: white;
   transition: all 1s;
 }
 
-.subscribe__form_form_btn {
+.subscribe__btn {
   width: 100px;
   border-radius: 0 22px 22px 0;
   background-color: #F16D7F;
   color: #FFFFFF;
 }
 
-.subscribe__form_form_btn:hover {
+.subscribe__btn:hover {
   cursor: pointer;
   background-color: #b82c3f;
   transition: all 1s;
@@ -431,4 +431,148 @@ a {
 
 .pagination__container {
   border: 1px solid #EBEBEB;
+}
+
+.slider {
+  background-color: #F7F7F7;
+}
+
+.slider__container {
+  border: 1px solid #EAEAEA;
+  max-width: 1600px;
+  height: 777px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../img/slider-image.png);
+}
+
+.slider__prev, .slider__next {
+  width: 47px;
+  height: 47px;
+  background: rgba(42, 42, 42, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.description__container {
+  border: 1px solid #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -65px;
+  margin-bottom: 129px;
+  background-color: #fff;
+}
+
+.description__collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 64px 0 0 0;
+
+}
+.description__collection h4 {
+  color: #F16D7F;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 12px 0;
+}
+
+.description__bar {
+  width: 63px;
+  height: 3px;
+  background-color: #EF5B70;
+}
+
+.description__heading h3 {
+  color: #4D4D4D;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 12px 0 48px 0;
+}
+
+.description__text {
+  max-width: 555px;
+}
+
+.description__text p {
+  color: #5E5E5E;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0;
+}
+
+.description__price {
+  margin: 32px 0 65px 0;
+}
+.description__price span {
+  color: #EF5B70;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+}
+
+.description__line {
+  width: 641px;
+  border: 1px solid #EAEAEA;
+}
+
+.description__choose {
+  margin: 65px 0 49px 0;
+}
+
+.choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choose__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 23px 0 0;
+}
+.choose__item:last-child {
+  margin: 0;
+}
+.choose__item span {
+  color: #6F6E6E;
+  font-size: 14px;
+  line-height: 17px;
+  display: block;
+}
+
+.choose__item img {
+  margin: 0 0 0 9px;
+}
+
+.description__btn {
+  width: 210px;
+  height: 47px;
+  border: 1px solid #FF6A6A;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 65px 0;
+}
+
+.description__btn span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #F26376;
+  display: block;
+}
+
+.description__btn img {
+  margin: 0 23px;
 }
