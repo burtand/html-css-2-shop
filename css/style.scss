@@ -159,37 +159,66 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
-
-    a {
-      display: block;
-    }
   }
 
-  &__card {
+  &-item {
+    position: relative;
+    width: 360px;
     background-color: #F8F8F8;
-    flex-basis: 360px;
-    padding-bottom: 20px;
 
-    &_heading {
+    &:hover {
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover &__img {
+      filter: brightness(50%);
+    }
+
+    &:hover &__add {
+      display: flex;
+    }
+
+    &__descr {
+      padding: 26px 18px 20px;
+    }
+
+    &__heading {
       font-size: 13px;
       line-height: 16px;
       color: #000000;
-      padding-left: 18px;
+      margin: 0;
     }
 
-    &_text {
+    &__text {
       font-weight: 300;
       font-size: 14px;
       line-height: 17px;
       color: #5D5D5D;
-      padding-left: 18px;
+      margin: 13px 0 18px 0;
     }
 
-    &_price {
+    &__price {
       font-size: 16px;
       line-height: 19px;
       color: #F16D7F;
-      padding-left: 18px;
+    }
+
+    &__add {
+      width: 140px;
+      height: 45px;
+      display: none;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #FFFFFF;
+      position: absolute;
+      border: 1px solid #FFFFFF;
+      top: 188px;
+      left: 110px;
+
+      span {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 
@@ -200,17 +229,29 @@ a {
     margin: 48px auto 0 auto;
     width: 210px;
     height: 46px;
-    border: 1px solid #FF6A6A;
+    border: 1px solid #F16D7F;
+    background-color: #F16D7F;
 
-    &_text {
+    span {
+      color: #FFFFFF;
       display: block;
-      color: #F26376;
       font-size: 16px;
       line-height: 19px;
       font-weight: 400;
     }
+
+    &:hover {
+      background-color: #FFFFFF;
+      border: 1px solid #FF6A6A;
+      transition: all 0.65s;
+
+      span {
+        color: #F26376;
+      }
+    }
   }
 }
+
 
 .features {
   margin-top: 96px;
@@ -341,18 +382,20 @@ a {
 
   &__email {
     width: 256px;
+    padding: 0 0 0 22px;
     border-radius: 22px 0 0 22px;
     background-color: #E1E1E1;
+    box-sizing: border-box;
 
     &:focus {
       outline: none;
-      background-color: grey;
-      color: white;
+      background-color: #F5F3F3;
+      color: black;
       transition: all 1s;
     }
 
     &:focus::placeholder {
-      color: white;
+      color: black;
       transition: all 1s;
     }
   }
@@ -365,6 +408,7 @@ a {
     width: 100px;
     border-radius: 0 22px 22px 0;
     background-color: #F16D7F;
+    border: 1px solid #F16D7F;
     color: #FFFFFF;
 
     &:hover {
@@ -374,7 +418,7 @@ a {
       border: 1px solid #FF6A6A;
       box-sizing: border-box;
 
-      // transition: all 1s;
+      transition: all 0.65s;
     }
   }
 }
@@ -453,8 +497,6 @@ a {
   }
 }
 
-
-
 .pagination {
   display: flex;
 
@@ -522,6 +564,7 @@ a {
     margin-top: -65px;
     margin-bottom: 129px;
     background-color: #fff;
+    padding-bottom: 65px;
   }
 
   &__collection {
@@ -589,21 +632,36 @@ a {
   &__btn {
     width: 210px;
     height: 47px;
-    border: 1px solid #FF6A6A;
+    border: 1px solid #F16D7F;
+    background-color: #F16D7F;
     display: flex;
     justify-content: start;
     align-items: center;
-    margin: 0 0 65px 0;
+
+    &:hover {
+      border: 1px solid #FF6A6A;
+      background-color: #ffffff;
+      transition: all 0.65s;
+
+      span {
+        color: #F26376;
+      }
+
+      svg {
+        fill: #EF5B70;
+      }
+    }
 
     span {
       font-size: 16px;
       line-height: 19px;
-      color: #F26376;
+      color: #FFFFFF;
       display: block;
     }
 
-    img {
+    svg {
       margin: 0 23px;
+      fill: #FFFFFF;
     }
   }
 }
@@ -636,7 +694,6 @@ a {
   }
 }
 
-
 .cart {
   margin: 96px 0 128px 0;
 
@@ -668,11 +725,16 @@ a {
     color: #000000;
     border: 1px solid #A4A4A4;
     padding: 16px 40px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #F5F3F3;
+      transition: all 0.65s;
+    }
   }
 
   &__form {
     width: 360px;
-    // outline: 1px solid red;
   }
 
 
@@ -692,6 +754,7 @@ a {
     height: 45px;
     border: 1px solid #A4A4A4;
     margin: 20px 0 0 0;
+    padding-left: 17px;
 
     &::placeholder {
       font-weight: 300;
@@ -714,6 +777,12 @@ a {
     padding: 10px 14px;
     background-color: #FFFFFF;
     margin: 24px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #F5F3F3;
+      transition: all 0.65s;
+    }
   }
 
   &__price {
@@ -766,9 +835,19 @@ a {
     line-height: 19px;
     color: #FFFFFF;
     background-color: #F16D7F;
+    border: 1px solid #F16D7F;
+    box-sizing: border-box;
     padding: 16px 0;
     align-self: center;
     margin: 17px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #FFFFFF;
+      border: 1px solid #FF6A6A;
+      color: #F26376;
+      transition: all 0.65s;
+    }
   }
 
 }
@@ -828,6 +907,118 @@ a {
 
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+.sign-up {
+  padding: 64px 0 96px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 360px;
+  }
+
+  &__form {}
+
+  &__left-heading {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin: 0;
+  }
+
+  &__input {
+    display: block;
+    width: 360px;
+    height: 45px;
+    margin: 20px 0 0 0;
+    border: 1px solid #A4A4A4;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  &__gender {
+    margin: 32px 0;
+
+    label {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      color: #000000;
+      margin: 0 20px 0 10px;
+    }
+  }
+
+  &__tip {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin: 15px 0 0 0;
+  }
+
+  &__btn {
+    margin: 40px 0 0 0;
+    width: 167px;
+    height: 48px;
+    background-color: #F16D7F;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #F16D7F;
+
+    &:hover {
+      cursor: pointer;
+      color: #F26376;
+      background-color: #FFFFFF;
+      border: 1px solid #FF6A6A;
+      transition: all 0.65s;
+    }
+  }
+
+  &__right {
+    width: 652px;
+  }
+
+  &__right-heading {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 0;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 23px 0 21px 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-left: -39px;
+
+    li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    svg {
+      margin: 0 22px 0 0;
     }
   }
 }
