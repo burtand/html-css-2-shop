@@ -1,16 +1,3 @@
-* {
-  font-family: 'Lato', sans-serif;
-}
-
-input {
-  border: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-
 .container {
   max-width: 1140px;
   width: 100%;
@@ -55,6 +42,7 @@ a {
     padding: 16px 0 0 16px;
 
     h1 {
+      font-family: 'Lato', sans-serif;
       margin: 0;
       padding: 0;
       font-weight: 900;
@@ -63,6 +51,7 @@ a {
       color: #222222;
 
       span {
+        font-family: 'Lato', sans-serif;
         font-weight: 700;
         font-size: 32px;
         color: #222222;
@@ -88,6 +77,7 @@ a {
   }
 
   &__card {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,12 +108,14 @@ a {
 
   &__title {
     span {
+      font-family: 'Lato', sans-serif;
       display: block;
       color: #FFFFFF;
       text-align: center;
     }
 
     h2 {
+      font-family: 'Lato', sans-serif;
       display: block;
       color: #F16D7F;
       text-align: center;
@@ -138,6 +130,7 @@ a {
   }
 
   &__heading {
+    font-family: 'Lato', sans-serif;
     color: black;
     text-align: center;
     font-size: 30px;
@@ -146,6 +139,7 @@ a {
   }
 
   &__text {
+    font-family: 'Lato', sans-serif;
     color: #9F9F9F;
     text-align: center;
     font-size: 14px;
@@ -160,8 +154,6 @@ a {
     justify-content: space-between;
     gap: 30px;
   }
-
-  &__item {}
 
   &-item {
     position: relative;
@@ -180,11 +172,16 @@ a {
       display: flex;
     }
 
+    &__link {
+      text-decoration: none;
+    }
+
     &__descr {
       padding: 26px 18px 20px;
     }
 
     &__heading {
+      font-family: 'Lato', sans-serif;
       font-size: 13px;
       line-height: 16px;
       color: #000000;
@@ -192,6 +189,7 @@ a {
     }
 
     &__text {
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 14px;
       line-height: 17px;
@@ -200,12 +198,14 @@ a {
     }
 
     &__price {
+      font-family: 'Lato', sans-serif;
       font-size: 16px;
       line-height: 19px;
       color: #F16D7F;
     }
 
     &__add {
+      text-decoration: none;
       padding: 10px 16px;
       display: none;
       align-items: center;
@@ -225,6 +225,7 @@ a {
       }
 
       span {
+        font-family: 'Lato', sans-serif;
         font-size: 14px;
         line-height: 17px;
         margin-left: 12px;
@@ -233,6 +234,7 @@ a {
   }
 
   &__btn {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,6 +291,7 @@ a {
     }
 
     h4 {
+      font-family: 'Lato', sans-serif;
       text-align: center;
       color: #FBFBFB;
       font-size: 20px;
@@ -298,6 +301,7 @@ a {
     }
 
     p {
+      font-family: 'Lato', sans-serif;
       text-align: center;
       color: #FBFBFB;
       font-weight: 300;
@@ -331,6 +335,7 @@ a {
     margin-top: -30px;
 
     p {
+      font-family: 'Lato', sans-serif;
       display: block;
       text-align: center;
       margin-top: 30px;
@@ -349,6 +354,7 @@ a {
     align-items: center;
 
     h3 {
+      font-family: 'Lato', sans-serif;
       font-size: 24px;
       line-height: 29px;
       color: #222224;
@@ -358,6 +364,7 @@ a {
     }
 
     span {
+      font-family: 'Lato', sans-serif;
       display: block;
       text-align: center;
       font-weight: 400;
@@ -373,6 +380,7 @@ a {
     box-sizing: border-box;
 
     h3 {
+      font-family: 'Lato', sans-serif;
       display: block;
       text-align: center;
       font-size: 24px;
@@ -382,6 +390,7 @@ a {
     }
 
     span {
+      font-family: 'Lato', sans-serif;
       display: block;
       text-align: center;
       font-size: 18px;
@@ -391,6 +400,10 @@ a {
   }
 
   &__email {
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
     width: 256px;
     padding: 0 0 0 22px;
     border-radius: 22px 0 0 22px;
@@ -405,13 +418,14 @@ a {
     }
 
     &:focus::placeholder {
-      color: black;
+      color: #B1B1B1;
       transition: all 1s;
     }
   }
 
   &__btn {
     padding: 16px;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 17px;
     box-sizing: border-box;
@@ -427,7 +441,6 @@ a {
       background-color: #FFFFFF;
       border: 1px solid #FF6A6A;
       box-sizing: border-box;
-
       transition: all 0.65s;
     }
   }
@@ -443,6 +456,7 @@ a {
   }
 
   &__rights {
+    font-family: 'Lato', sans-serif;
     color: #FBFBFB;
     margin: 30px 5px;
     font-size: 16px;
@@ -465,8 +479,9 @@ a {
     &:hover {
       background-color: #F16D7F;
 
-      svg {
-        fill: white;
+      i {
+        color: white;
+        transition: all 0.35s;
       }
     }
   }
@@ -481,19 +496,28 @@ a {
     align-items: center;
   }
 
-  &__left h2 {
-    color: #F16D7F;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 400;
-    padding: 60px 0;
-    margin: 0;
+  &__left {
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      font-family: 'Lato', sans-serif;
+      color: #F16D7F;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 400;
+      padding: 60px 0;
+      margin: 0;
+    }
   }
 
   &__right {
 
     h3,
     a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
       color: #636363;
       font-weight: 300;
       font-size: 14px;
@@ -501,11 +525,168 @@ a {
     }
 
     span {
+      font-family: 'Lato', sans-serif;
       color: #F16D7F;
       font-weight: 700;
     }
   }
 }
+
+.sort {
+  &__container {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    padding: 41px 0 55px;
+  }
+
+  &__filter {
+    position: relative;
+    width: 360px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    &:hover &-menu {
+      display: block;
+    }
+
+    &-name {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      padding-left: 16px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+
+
+  &__filter-menu {
+    display: none;
+    width: 360px;
+    position: absolute;
+    top: -6px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1;
+
+    span {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #EF5B70;
+    }
+
+    svg {
+      fill: #EF5B70;
+      margin-left: 10px;
+    }
+
+    details {
+      margin-top: 18px;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6F6E6E;
+
+      &[open] summary {
+        color: #EF5B70;
+      }
+    }
+
+    summary {
+      list-style-type: none;
+      border-left: 5px solid #EF5B70;
+      border-bottom: 1px solid #EBEBEB;
+      padding: 10px;
+    }
+
+    ul {
+      margin: 24px 0 24px 0;
+      list-style-type: none;
+      padding-left: 16px;
+    }
+
+    li {
+      margin-top: 11px;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    &:hover .sort__size {
+      display: block;
+    }
+
+    span {
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6F6E6E;
+    }
+
+    img {
+      display: block;
+      margin: 0 28px 0 10px;
+    }
+
+
+
+  }
+
+  &__size {
+    display: none;
+    padding: 10px 0 12px 10px;
+    width: 79px;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    box-sizing: border-box;
+    z-index: 1;
+    top: 32px;
+
+    &-checkbox:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &-checkbox {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      label {
+        margin-left: 10px;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #6F6E6E;
+      }
+    }
+
+  }
+}
+
+
 
 .pagination {
   display: flex;
@@ -519,6 +700,8 @@ a {
     gap: 16px;
 
     a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
       display: block;
     }
   }
@@ -529,12 +712,14 @@ a {
     gap: 16px;
 
     a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 16px;
       line-height: 19px;
       color: #C4C4C4;
 
-      &:first-child {
+      &:hover {
         color: #EF5B70;
       }
     }
@@ -584,6 +769,7 @@ a {
     margin: 64px 0 0 0;
 
     h4 {
+      font-family: 'Lato', sans-serif;
       color: #F16D7F;
       font-weight: 300;
       font-size: 14px;
@@ -599,6 +785,7 @@ a {
   }
 
   &__heading h3 {
+    font-family: 'Lato', sans-serif;
     color: #4D4D4D;
     font-weight: 300;
     font-size: 18px;
@@ -610,6 +797,7 @@ a {
     max-width: 555px;
 
     p {
+      font-family: 'Lato', sans-serif;
       color: #5E5E5E;
       font-weight: 300;
       font-size: 14px;
@@ -623,6 +811,7 @@ a {
     margin: 32px 0 65px 0;
 
     span {
+      font-family: 'Lato', sans-serif;
       color: #EF5B70;
       font-weight: 300;
       font-size: 24px;
@@ -637,6 +826,10 @@ a {
 
   &__choose {
     margin: 65px 0 49px 0;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   &__btn {
@@ -654,6 +847,7 @@ a {
       transition: all 0.65s;
 
       span {
+        font-family: 'Lato', sans-serif;
         color: #F26376;
       }
 
@@ -663,6 +857,7 @@ a {
     }
 
     span {
+      font-family: 'Lato', sans-serif;
       font-size: 16px;
       line-height: 19px;
       color: #FFFFFF;
@@ -692,6 +887,7 @@ a {
     }
 
     span {
+      font-family: 'Lato', sans-serif;
       color: #6F6E6E;
       font-size: 14px;
       line-height: 17px;
@@ -728,6 +924,8 @@ a {
   }
 
   &__btn {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
     display: block;
     font-weight: 300;
     font-size: 14px;
@@ -750,6 +948,7 @@ a {
 
   &__shipping {
     h3 {
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 16px;
       line-height: 19px;
@@ -767,6 +966,7 @@ a {
     padding-left: 17px;
 
     &::placeholder {
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 13px;
       line-height: 16px;
@@ -779,6 +979,7 @@ a {
   }
 
   &__get-a-quote {
+    font-family: 'Lato', sans-serif;
     border: 1px solid #A4A4A4;
     font-weight: 300;
     font-size: 11px;
@@ -804,6 +1005,7 @@ a {
   }
 
   &__sub-total {
+    font-family: 'Lato', sans-serif;
     align-self: flex-end;
     margin: 39px 34px 0 0;
     font-size: 11px;
@@ -816,6 +1018,7 @@ a {
   }
 
   &__grand-total {
+    font-family: 'Lato', sans-serif;
     align-self: flex-end;
     margin: 12px 37px 0 0;
     font-weight: 300;
@@ -839,6 +1042,7 @@ a {
   }
 
   &__proceed {
+    font-family: 'Lato', sans-serif;
     width: 273px;
     font-weight: 300;
     font-size: 16px;
@@ -877,6 +1081,7 @@ a {
   }
 
   &__heading {
+    font-family: 'Lato', sans-serif;
     font-size: 24px;
     line-height: 29px;
     color: #222222;
@@ -886,6 +1091,7 @@ a {
   &__details {
 
     p {
+      font-family: 'Lato', sans-serif;
       font-size: 22px;
       line-height: 26px;
       color: #575757;
@@ -933,9 +1139,8 @@ a {
     width: 360px;
   }
 
-  &__form {}
-
   &__left-heading {
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
@@ -944,6 +1149,7 @@ a {
   }
 
   &__input {
+    font-family: 'Lato', sans-serif;
     display: block;
     width: 360px;
     height: 45px;
@@ -960,6 +1166,7 @@ a {
     margin: 32px 0;
 
     label {
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 11px;
       line-height: 13px;
@@ -969,6 +1176,7 @@ a {
   }
 
   &__tip {
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 16px;
@@ -977,6 +1185,7 @@ a {
   }
 
   &__btn {
+    font-family: 'Lato', sans-serif;
     margin: 40px 0 0 0;
     width: 167px;
     height: 48px;
@@ -1000,6 +1209,7 @@ a {
   }
 
   &__right-heading {
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
@@ -1008,6 +1218,7 @@ a {
   }
 
   &__text {
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
@@ -1016,6 +1227,7 @@ a {
   }
 
   &__list {
+    font-family: 'Lato', sans-serif;
     list-style-type: none;
     font-weight: 300;
     font-size: 24px;
