@@ -161,6 +161,8 @@ a {
     gap: 30px;
   }
 
+  &__item {}
+
   &-item {
     position: relative;
     width: 360px;
@@ -204,20 +206,28 @@ a {
     }
 
     &__add {
-      width: 140px;
-      height: 45px;
+      padding: 10px 16px;
       display: none;
-      justify-content: space-evenly;
       align-items: center;
       color: #FFFFFF;
-      position: absolute;
       border: 1px solid #FFFFFF;
-      top: 188px;
-      left: 110px;
+
+      &:hover {
+        box-shadow: 0 0 10px #fff;
+      }
+
+      &-box {
+        position: absolute;
+        top: 188px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
 
       span {
         font-size: 14px;
         line-height: 17px;
+        margin-left: 12px;
       }
     }
   }
