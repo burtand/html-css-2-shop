@@ -605,7 +605,8 @@
     align-items: center;
 
     &:hover &-menu {
-      display: block;
+      opacity: 1;
+      z-index: 99;
     }
 
     &-name {
@@ -624,8 +625,10 @@
 
 
 
+
+
   &__filter-menu {
-    display: none;
+    opacity: 0;
     width: 360px;
     position: absolute;
     top: -6px;
@@ -633,8 +636,8 @@
     padding: 16px;
     box-sizing: border-box;
     background-color: #fff;
-    z-index: 1;
-    transition: all .35s;
+    z-index: -1;
+    transition: all .35s ease-out;
 
     span {
       font-family: 'Lato', sans-serif;
@@ -693,7 +696,8 @@
     padding: 10px 0;
 
     &:hover .sort__size {
-      display: block;
+      opacity: 1;
+      z-index: 99;
     }
 
     span {
@@ -713,15 +717,17 @@
   }
 
   &__size {
-    display: none;
+    opacity: 0;
+    z-index: -1;
     padding: 10px 0 12px 10px;
     width: 79px;
     position: absolute;
     background: #FFFFFF;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     box-sizing: border-box;
-    z-index: 1;
     top: 32px;
+    transition: all .35s ease-out;
+
 
     &-checkbox:not(:first-child) {
       margin-top: 10px;
@@ -996,6 +1002,7 @@
     &:hover {
       cursor: pointer;
       background-color: #F5F3F3;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
     }
   }
 
@@ -1052,6 +1059,7 @@
     &:hover {
       cursor: pointer;
       background-color: #F5F3F3;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
     }
   }
 
@@ -1245,6 +1253,9 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Lato', sans-serif;
     margin: 40px 0 0 0;
     width: 167px;
@@ -1256,6 +1267,10 @@
     border: 1px solid #F16D7F;
     transition: all 0.65s;
 
+    i {
+      margin-left: 20px;
+      font-size: 18px;
+    }
 
     &:hover {
       cursor: pointer;

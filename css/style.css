@@ -755,7 +755,8 @@
 }
 
 .sort__filter:hover .sort__filter-menu {
-  display: block;
+  opacity: 1;
+  z-index: 99;
 }
 
 .sort__filter-name {
@@ -772,7 +773,7 @@
 }
 
 .sort__filter-menu {
-  display: none;
+  opacity: 0;
   width: 360px;
   position: absolute;
   top: -6px;
@@ -782,9 +783,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
-  z-index: 1;
-  -webkit-transition: all .35s;
-  transition: all .35s;
+  z-index: -1;
+  -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
 }
 
 .sort__filter-menu span {
@@ -856,7 +857,8 @@
 }
 
 .sort__item:hover .sort__size {
-  display: block;
+  opacity: 1;
+  z-index: 99;
 }
 
 .sort__item span {
@@ -872,7 +874,8 @@
 }
 
 .sort__size {
-  display: none;
+  opacity: 0;
+  z-index: -1;
   padding: 10px 0 12px 10px;
   width: 79px;
   position: absolute;
@@ -881,8 +884,9 @@
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 1;
   top: 32px;
+  -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
 }
 
 .sort__size-checkbox:not(:first-child) {
@@ -1224,6 +1228,8 @@
 .cart__btn:hover {
   cursor: pointer;
   background-color: #F5F3F3;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .cart__form {
@@ -1314,6 +1320,8 @@
 .cart__get-a-quote:hover {
   cursor: pointer;
   background-color: #F5F3F3;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .cart__price {
@@ -1528,6 +1536,15 @@
 }
 
 .sign-up__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Lato', sans-serif;
   margin: 40px 0 0 0;
   width: 167px;
@@ -1539,6 +1556,11 @@
   border: 1px solid #F16D7F;
   -webkit-transition: all 0.65s;
   transition: all 0.65s;
+}
+
+.sign-up__btn i {
+  margin-left: 20px;
+  font-size: 18px;
 }
 
 .sign-up__btn:hover {
