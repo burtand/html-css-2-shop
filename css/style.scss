@@ -8,6 +8,10 @@
   background-color: black;
   padding: 18px 0 18px 0;
 
+  a {
+    color: transparent;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -159,6 +163,7 @@
     position: relative;
     width: 360px;
     background-color: #F8F8F8;
+    transition: all .2s;
 
     &:hover {
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
@@ -166,6 +171,10 @@
 
     &:hover &__img {
       filter: brightness(50%);
+    }
+
+    &__img {
+      transition: all .2s;
     }
 
     &:hover &__add {
@@ -211,6 +220,7 @@
       align-items: center;
       color: #FFFFFF;
       border: 1px solid #FFFFFF;
+      transition: all .2s;
 
       &:hover {
         box-shadow: 0 0 10px #fff;
@@ -243,6 +253,8 @@
     height: 46px;
     border: 1px solid #F16D7F;
     background-color: #F16D7F;
+    transition: all 0.65s;
+
 
     span {
       color: #FFFFFF;
@@ -255,7 +267,6 @@
     &:hover {
       background-color: #FFFFFF;
       border: 1px solid #FF6A6A;
-      transition: all 0.65s;
 
       span {
         color: #F26376;
@@ -314,12 +325,21 @@
 
 .subscribe {
   height: 448px;
-  background: url('../img/subscribe_bg.png') no-repeat;
   background-color: #f0f0f0;
+
+  &__bcg-container {
+    display: flex;
+    height: 448px;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../img/subscribe_bg.png') no-repeat;
+  }
 
   &__container {
     display: flex;
     height: 100%;
+
   }
 
   &__left {
@@ -400,7 +420,7 @@
   }
 
   &__email {
-    border: none;
+    border: 1px solid transparent;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 17px;
@@ -408,18 +428,22 @@
     padding: 0 0 0 22px;
     border-radius: 22px 0 0 22px;
     background-color: #E1E1E1;
-    box-sizing: border-box;
+    transition: all .6s;
+
 
     &:focus {
       outline: none;
       background-color: #F5F3F3;
       color: black;
-      transition: all 1s;
+      border: 1px solid #B1B1B1;
+    }
+
+    &::placeholder {
+      transition: all 0.6s;
     }
 
     &:focus::placeholder {
       color: #B1B1B1;
-      transition: all 1s;
     }
   }
 
@@ -434,6 +458,7 @@
     background-color: #F16D7F;
     border: 1px solid #F16D7F;
     color: #FFFFFF;
+    transition: all 0.65s;
 
     &:hover {
       cursor: pointer;
@@ -441,7 +466,6 @@
       background-color: #FFFFFF;
       border: 1px solid #FF6A6A;
       box-sizing: border-box;
-      transition: all 0.65s;
     }
   }
 }
@@ -475,13 +499,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.35s;
+
+    i {
+      transition: all 0.35s;
+    }
 
     &:hover {
       background-color: #F16D7F;
 
       i {
         color: white;
-        transition: all 0.35s;
       }
     }
   }
@@ -577,6 +605,7 @@
     box-sizing: border-box;
     background-color: #fff;
     z-index: 1;
+    transition: all .35s;
 
     span {
       font-family: 'Lato', sans-serif;
@@ -686,8 +715,6 @@
   }
 }
 
-
-
 .pagination {
   display: flex;
 
@@ -718,6 +745,7 @@
       font-size: 16px;
       line-height: 19px;
       color: #C4C4C4;
+      transition: all .2s;
 
       &:hover {
         color: #EF5B70;
@@ -933,11 +961,12 @@
     color: #000000;
     border: 1px solid #A4A4A4;
     padding: 16px 40px;
+    transition: all 0.65s;
+
 
     &:hover {
       cursor: pointer;
       background-color: #F5F3F3;
-      transition: all 0.65s;
     }
   }
 
@@ -988,11 +1017,12 @@
     padding: 10px 14px;
     background-color: #FFFFFF;
     margin: 24px 0 0 0;
+    transition: all 0.65s;
+
 
     &:hover {
       cursor: pointer;
       background-color: #F5F3F3;
-      transition: all 0.65s;
     }
   }
 
@@ -1054,13 +1084,14 @@
     padding: 16px 0;
     align-self: center;
     margin: 17px 0 0 0;
+    transition: all 0.65s;
+
 
     &:hover {
       cursor: pointer;
       background-color: #FFFFFF;
       border: 1px solid #FF6A6A;
       color: #F26376;
-      transition: all 0.65s;
     }
   }
 
@@ -1194,13 +1225,14 @@
     font-size: 14px;
     line-height: 17px;
     border: 1px solid #F16D7F;
+    transition: all 0.65s;
+
 
     &:hover {
       cursor: pointer;
       color: #F26376;
       background-color: #FFFFFF;
       border: 1px solid #FF6A6A;
-      transition: all 0.65s;
     }
   }
 
