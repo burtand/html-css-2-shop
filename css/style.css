@@ -757,6 +757,7 @@
 .sort__filter:hover .sort__filter-menu {
   opacity: 1;
   z-index: 99;
+  width: 360px;
 }
 
 .sort__filter-name {
@@ -774,7 +775,7 @@
 
 .sort__filter-menu {
   opacity: 0;
-  width: 360px;
+  width: 0;
   position: absolute;
   top: -6px;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
