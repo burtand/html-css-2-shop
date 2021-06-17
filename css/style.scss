@@ -145,6 +145,7 @@
       margin-bottom: 3%;
       background-size: cover;
       background-position: center;
+      transition: all .65s;
 
     }
 
@@ -157,7 +158,7 @@
       background-position: center;
 
       &:hover {
-        transform: scale(1.3) rotate(360deg);
+        transform: scale(1.3);
         box-shadow: 0 10px 16px #F16D7F;
         z-index: 3;
       }
@@ -165,7 +166,6 @@
 
     &:first-child {
       background-image: url('../img/product-1.png');
-      transition: all .65s;
 
       &:hover {
         transform: translate(180px, 110px) scale(2);
@@ -176,7 +176,6 @@
 
     &:nth-child(2) {
       background-image: url('../img/product-2.png');
-      transition: all .65s;
 
       &:hover {
         transform: translateY(110px) scale(2);
@@ -187,7 +186,6 @@
 
     &:nth-child(3) {
       background-image: url('../img/product-3.png');
-      transition: all .65s;
 
       &:hover {
         transform: translate(-180px, 110px) scale(2);
@@ -1414,21 +1412,33 @@
     &__container {
       min-height: 367px;
       background: url('../img/man768.png') no-repeat;
+      background-position: -40px bottom;
+      justify-content: flex-end;
     }
 
     &__text {
+      max-width: 283px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
       h1 {
         font-size: 44px;
-      }
+        font-weight: 700;
+        line-height: 26px;
 
-      span {
-        font-size: 24px;
+        span {
+          font-size: 24px;
+          line-height: 14px;
+        }
       }
     }
   }
 
 
   .product {
+    margin-top: 20px;
+    margin-bottom: 155px;
+
     &__link {
 
       &:not(:last-child) {
@@ -1454,7 +1464,19 @@
     }
   }
 
+  .goods {
+    &__text {
+      margin-bottom: 73px;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+  }
+
   .features {
+    margin-top: 65px;
+
     &__container {
       flex-direction: column;
       justify-content: center;
@@ -1493,6 +1515,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .container {
+    width: 375px;
+  }
+
   .header {
     &__nav {
       display: flex;
@@ -1524,19 +1551,146 @@
     }
 
     &__text {
-      width: 100%;
+      min-width: 263px;
+      padding-top: 3px;
+      padding-bottom: 3px;
 
       h1 {
-        font-size: 38px;
+        font-size: 37px;
+        font-weight: 700;
+        line-height: 28px;
 
         span {
           font-size: 20px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
 
+  .product {
+    margin-bottom: 64px;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    &__card {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(31, 13, 13, 0.5);
+    }
+
+    &__link {
+
+      &:not(:last-child) {
+        width: 343px;
+        margin-bottom: 0;
+        height: 247px;
+      }
+
+      &:last-child {
+        height: 111px;
+        width: 343px;
+        background-image: url('../img/accesories2.png');
+      }
+
+      &:first-child {
+        background-image: url('../img/for-women2.png');
+
+        &:hover {
+          transform: translate(0, 0) scale(1.3);
+        }
+
+      }
+
+      &:nth-child(2) {
+        background-image: url('../img/for-men2.png');
+
+        &:hover {
+          transform: translate(0, 0) scale(1.3);
         }
       }
 
+      &:nth-child(3) {
+        background-image: url('../img/for-kids2.png');
+
+        &:hover {
+          transform: translate(0, 0) scale(1.3);
+        }
+      }
+    }
+  }
+
+  .goods {
+    &__text {
+      margin-bottom: 64px;
+    }
+  }
+
+  .features {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      padding: 48px 0 80px;
+    }
+  }
+
+  .subscribe {
+    height: auto;
+
+    &__bcg-container {
+      height: auto;
+      background-position: 0 bottom;
+    }
+
+    &__container {
+      min-height: auto;
+      padding: 54px 0 109px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+
+    &__message {
+      margin-top: 0;
+    }
+
+    &__left {
+      max-width: 100%
+    }
+
+    &__right {
+      max-width: 100%;
+      margin-right: 0;
+      margin-top: 48px;
 
     }
   }
 
+  .copyright {
+    &__container {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    &__rights {
+      font-family: 'Lato', sans-serif;
+      color: #FBFBFB;
+      margin: 30px 5px;
+      font-size: 16px;
+      line-height: 19px;
+      margin: 0 0 10px 0;
+    }
+
+    &__social {
+      margin-top: 43px;
+      margin-bottom: 40px;
+    }
+
+  }
 }
