@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @-webkit-keyframes tracking-in-expand-fwd {
   0% {
     letter-spacing: -0.5em;
@@ -45,6 +50,7 @@
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+
 }
 
 .header {
@@ -69,6 +75,77 @@
   }
 }
 
+
+
+.side-menu {
+  margin: 0;
+  display: none;
+  padding: 37px 0 0 34px;
+  box-sizing: border-box;
+  width: 232px;
+  height: 764px;
+  position: absolute;
+  background-color: #FFFFFF;
+  left: 1140px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+
+
+  &__close-btn {
+    position: absolute;
+    right: 17px;
+    top: 16px;
+  }
+
+  &__heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    margin-top: 20px;
+    ;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        margin-left: 22px;
+        margin-bottom: 11px;
+        font-size: 14px;
+        line-height: 17px;
+
+        a {
+          text-decoration: none;
+          color: #6F6E6E;
+        }
+      }
+    }
+
+    &-heading {
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      color: #F16D7F;
+      margin-bottom: 12px;
+    }
+  }
+
+
+}
+
+.visible {
+  display: block;
+}
+
 .promo {
   padding: 0 2%;
   background-color: #F1E4E6;
@@ -81,6 +158,7 @@
     background: url('../img/man.png') no-repeat;
     background-position: -227px bottom;
     align-items: center;
+    position: relative;
   }
 
   &__text {
@@ -104,9 +182,13 @@
         font-size: 32px;
         color: #222222;
         line-height: 32px;
+        padding: 0;
+        margin: 0;
 
         span {
           color: #F16D7F;
+          padding: 0;
+          margin: 0;
         }
       }
     }
@@ -668,7 +750,7 @@
     display: flex;
     justify-content: start;
     gap: 30px;
-    padding: 41px 0 55px;
+    padding: 41px 0 55px 20px;
   }
 
   &__filter {
